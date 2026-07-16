@@ -23,42 +23,18 @@ body {
     font-size: 18px
 }
 
-.floated {
-    float: right;
-    margin-left: 20px;
-    margin-bottom: 10px;
-
-}
-
-
-@media screen and (min-width: 1px) {      
+@media screen and (min-width: 1px) {
   .hometext {
     max-width: 85%;
   }
-  #pic {
-    width: 160px;
-    height: auto;
-    border-radius: 25px;
-  }
 }
 
-@media screen and (min-width: 600px) {      
+@media screen and (min-width: 600px) {
     .hometext {
       max-width: 70%;
     }
-    #pic {
-      width: 200px;
-      height: auto;
-    }
   }
 
-  @media screen and (min-width: 900px) {
-    #pic {
-      width: 300px;
-      height: auto;
-    }
-  }
-  
 .sprite {
     position: relative;
     height: 30px;
