@@ -16,6 +16,18 @@
 
 	<link rel='icon' href='assets/images/favicon.ico' type='image/x-icon'/>
 
+	<!-- three.js (WebGPU build) for the interactive jelly on the home page -->
+	<script type="importmap">
+	{
+		"imports": {
+			"three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.webgpu.js",
+			"three/webgpu": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.webgpu.js",
+			"three/tsl": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.tsl.js",
+			"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+		}
+	}
+	</script>
+
 	<title>Alex Isken</title>
 </head>
 
@@ -53,6 +65,12 @@
 
 	<!-- My content -->
 	<div class="hometext">
+		<!-- Interactive jelly: three.js + WebGPU. Click it, drag it. -->
+		<div id="jelly-stage" class="jelly-stage" role="img" aria-label="A wobbly strawberry jelly on a plate. Click or drag it to make it bounce.">
+			<canvas id="jelly-canvas" class="jelly-canvas"></canvas>
+			<div class="jelly-placeholder" aria-hidden="true">&#127854;</div>
+			<p id="jelly-hint" class="jelly-hint">poke the jelly &middot; or grab it and pull</p>
+		</div>
 		<div class="intro">
 			<img src="assets/images/work_alex.jpg" alt="me" id="pic" class="floated">
 			Hi, I'm Alex.
@@ -101,5 +119,17 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<!-- The jelly. If the browser can't run it (no import maps, CDN blocked,
+	     no WebGPU *and* no WebGL), the stage quietly collapses. -->
+	<script type="module" src="assets/js/jelly.js"></script>
+	<script>
+		setTimeout(function () {
+			if (!window.__jellyReady) {
+				var stage = document.getElementById('jelly-stage');
+				if (stage) stage.classList.add('jelly-stage--failed');
+			}
+		}, 15000);
+	</script>
 </body>
 </html>
