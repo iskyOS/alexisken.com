@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" style="--paper:#A9502C; --ink:#F2EAD8">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#A9502C" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+	<meta name="description" content="About Alex Isken — product marketing manager at Datadog, Marquette alumnus, based in New York City.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://alexisken.com/about">
+	<meta property="og:title" content="About — Alex Isken">
+	<meta property="og:description" content="About Alex Isken — product marketing manager at Datadog, Marquette alumnus, based in New York City.">
+	<meta property="og:image" content="https://alexisken.com/assets/images/avatar.jpg">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<title>About — Alex Isken</title>
+</head>
+
+<body>
+
+	<header class="page-head">
+		<p class="crumbs"><a href="/">home</a></p>
+
+		<div class="page-content text-columns">
+			<p>Hi, I'm Alex, a product marketing manager at <a href="https://www.datadoghq.com">Datadog</a> in New York.</p>
+
+			<p>I'm a proud alumnus of <a href="https://www.marquette.edu/">Marquette University</a>, and I'm passionate about solving problems with technology.</p>
+
+			<h2>Previously</h2>
+
+			<p>I worked at <a href="https://www.nielsen.com">Nielsen</a>, where I was a part of the Technology Emerging Leaders Program. I worked as a serverless engineer, technical product owner, client consultant, and CloudOps project manager. I even had the privilege of moving to Milan to work as a systems designer &amp; architect with teams around the world.</p>
+
+			<p>Before that, I worked briefly as an investment research analyst. I focused mostly on healthcare equities, but I also built a statistical ratings model for municipal debt.</p>
+
+			<p>While at Marquette I had the opportunity to study under <a href="https://www.marquette.edu/business/directory/david-krause.php">Dr. David Krause</a> in the Applied Investment Management program. I also worked under <a href="https://www.marquette.edu/business/directory/terence-ow.php">Professor Terence Ow</a> to research behavioral finance in action, studying the correlation between daily sentiment of tweets and following stock price movements.</p>
+
+			<h2>Outside of work</h2>
+
+			<p>I love board games, disc golf, exploring New York, and reading Sci-Fi. You can often find me programming or taking online classes at coffee shops around Manhattan.</p>
+
+			<p>If you'd like to say hi, you can reach me <a id="copy-email" href="mailto:alexander.isken@gmail.com">by email</a>, or find me on <a href="https://www.linkedin.com/in/alexisken/">LinkedIn</a> and <a href="https://github.com/alexisken">GitHub</a>. My <a href="assets/resume/AI's Resume.pdf">resume</a> is here too.</p>
+		</div>
+
+		<div class="bottom-title-row">
+			<h1 class="title"><a class="titlelink" href="/">About</a></h1>
+			<p class="sub" id="about-date"></p>
+		</div>
+	</header>
+
+	<script>
+	// Rotated "SEP '26" style stamp beside the title.
+	const aboutDate = document.getElementById('about-date');
+	const now = new Date();
+	const month = now.toLocaleString(undefined, { month: 'short' }).toUpperCase();
+	aboutDate.textContent = month + " '" + String(now.getFullYear()).slice(-2);
+
+	const copyEmail = document.getElementById('copy-email');
+	copyEmail.addEventListener('click', function (e) {
+		if (!navigator.clipboard) return;
+		e.preventDefault();
+		navigator.clipboard.writeText('alexander.isken@gmail.com').then(() => {
+			this.textContent = 'address copied';
+			setTimeout(() => { this.textContent = 'by email'; }, 1500);
+		});
+	});
+	</script>
+
+</body>
+</html>

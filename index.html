@@ -1,105 +1,66 @@
-<!doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" style="--paper:#25457A; --ink:#F2EAD8">
 <head>
-
-	<!-- Meta tag from Bootstrap to enable responsiveness -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
-	
-	<!-- Import CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-	<link href="assets/css/styles.css" rel="stylesheet">
-
-	<!-- Bring in that good good Roboto font -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
-
-	<link rel='icon' href='assets/images/favicon.ico' type='image/x-icon'/>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#25457A" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+	<meta name="description" content="Alex Isken — product marketing manager at Datadog, based in New York City.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://alexisken.com/">
+	<meta property="og:title" content="Alex Isken">
+	<meta property="og:description" content="Alex Isken — product marketing manager at Datadog, based in New York City.">
+	<meta property="og:image" content="https://alexisken.com/assets/images/avatar.jpg">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 	<title>Alex Isken</title>
 </head>
 
-<body>
+<body class="home">
 
-	<!-- Nav bar -->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #33393d">
+	<img class="home-bg-avatar" src="assets/images/avatar.jpg" alt="">
 
-		<a class="navbar-brand" href="#"><img src="assets/images/square_logo.png" width="30" height="30" alt="logo"></a>
-
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://www.linkedin.com/in/alexisken/">Linkedin</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="https://github.com/alexisken">GitHub</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="assets/resume/AI's Resume.pdf">Resume</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">alexander.isken@gmail.com</a>
-				</li>
-			</ul>
+	<nav class="home-nav" aria-label="Main">
+		<div class="nav-col">
+			<div class="section-label">01 About</div>
+			<a href="about.html">me</a>
+			<a href="assets/resume/AI's Resume.pdf">resume</a>
+		</div>
+		<div class="nav-col">
+			<div class="section-label">02 Work</div>
+			<a href="https://www.datadoghq.com">Datadog</a>
+			<a href="https://www.linkedin.com/in/alexisken/">LinkedIn</a>
+			<a href="https://github.com/alexisken">GitHub</a>
+		</div>
+		<div class="nav-col">
+			<div class="section-label">03 Contact</div>
+			<a id="copy-email" href="mailto:alexander.isken@gmail.com">mail</a>
+			<a href="mailto:alexander.isken@gmail.com">say hi</a>
 		</div>
 	</nav>
 
-	<!-- My content -->
-	<div class="hometext">
-		<div class="intro">
-			<img src="assets/images/work_alex.jpg" alt="me" id="pic" class="floated">
-			Hi, I'm Alex.
-		</div>
-	</br>
-	</br>
-		<div class="headline">
-			<p>
-				I'm a product marketing manager at <a class="ext-link" href="https://www.datadoghq.com" style="color: white; text-decoration: underline">Datadog</a>
-				<img src="assets/images/dd_icon_white.png" alt="datadog" class="sprite">
-			</p>
-		</div>
-	</br>
-		<div class="continued">
-			<p>
-				I'm also a proud alumnus of <a class="ext-link" href="https://www.marquette.edu/" style="color: white; text-decoration: underline">Marquette University</a>, and I'm passionate about solving problems with technology.
-			</p>
-		</br>
-		<hr style="background-color: white">
-		</br></br>
-			<p>
-				Previously, I worked at <a class="ext-link" href="https://www.nielsen.com" style="color: white; text-decoration: underline">Nielsen</a>, where
-				I was a part of the Technology Emerging Leaders Program. I worked as a serverless engineer, technical product owner, client consultant, and CloudOps project manager. 
-				I even had the privilege of moving to Milan to work as a systems designer & architect with teams around the world.
-			</p> 
-			<p>
-				Before that, I worked briefly as an investment research analyst. I focused mostly on healthcare equities, but I also built a statistical ratings model for municipal debt.
-			</p>
-			<p>
-				While at Marquette I had the opportunity to study under <a class="ext-link" href="https://www.marquette.edu/business/directory/david-krause.php" style="color: white; text-decoration: underline">Dr. David Krause</a> 
-				in the Applied Investment Management program. I also worked under <a class="ext-link" href="https://www.marquette.edu/business/directory/terence-ow.php" style="color: white; text-decoration: underline">Professor Terence Ow</a> 
-				to research behavioral finance in action, studying the correlation between daily sentiment of tweets and following stock price movements.
-			</p>
-		</br>
-		<hr style="background-color: white">
-		</br></br>
-			<p>
-				Outside of work, I love board games, disc golf, exploring New York, and reading Sci-Fi. You can often find me programming or taking online classes at coffee shops around Manhattan.
-			</p>
-			<p>
-				If you'd like to say hi, you can find me at <a href="mailto:alexander.isken@gmail.com" style="color: white; text-decoration: underline">alexander.isken@gmail.com</a>.
-			</p>
-		</div>
+	<p class="meta">NYC / Product &amp; Code / <span id="year">2026</span></p>
+
+	<div class="home-hero">
+		<h1 class="title"><a class="titlelink" href="/">Alex</a></h1>
+		<p class="sub">Product marketing &amp;<br> technology</p>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script>
+	document.getElementById('year').textContent = new Date().getFullYear();
+
+	// Click "mail" to copy the address; falls back to the mailto: link
+	// when the clipboard API is unavailable.
+	const copyEmail = document.getElementById('copy-email');
+	copyEmail.addEventListener('click', function (e) {
+		if (!navigator.clipboard) return;
+		e.preventDefault();
+		navigator.clipboard.writeText('alexander.isken@gmail.com').then(() => {
+			this.textContent = 'address copied';
+			setTimeout(() => { this.textContent = 'mail'; }, 1200);
+		});
+	});
+	</script>
+
 </body>
 </html>
