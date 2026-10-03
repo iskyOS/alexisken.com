@@ -2,7 +2,7 @@
    alexisken.com — Swiss-poster treatment.
 
    Each page declares its own two colours inline on <html>:
-       <html style="--paper:#25457A; --ink:#F2EAD8">
+       <html style="--paper:#1D4ED8; --ink:#F2EAD8">
    --paper = background, --ink = foreground. Everything below reads
    those two variables, in light AND dark mode.
    ============================================================ */
@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@300..900&display=swap');
 
 :root {
-    --paper: #25457A;   /* fallback if a page forgets to declare */
+    --paper: #1D4ED8;   /* fallback if a page forgets to declare */
     --ink:   #F2EAD8;
     --void:  #070707;   /* dark-mode ground */
 
